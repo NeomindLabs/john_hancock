@@ -1,6 +1,10 @@
 //= require signature_pad
 
-document.addEventListener('DOMContentLoaded', function(){
+let JOHN_HANCOCK = {
+  loadEvent: typeof Turbo === "undefined" ? "DOMContentLoaded" : "turbo:load"
+}
+
+document.addEventListener(JOHN_HANCOCK.loadEvent, function(){
   const canvas = document.getElementById("JohnHancock-canvas");
   const hidden_field = document.getElementById("JohnHancock-hidden");
 
